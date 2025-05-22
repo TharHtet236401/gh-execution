@@ -79,7 +79,9 @@ jobs:
     needs: [lint, deploy]
     if: failure()
     runs-on: ubuntu-latest
-    runs: |
-      echo "Report executed"
-      echo "${{ toJSON(github) }}"
-     
+    steps:
+      - name: Generate Report
+        run: |
+          echo "Report executed"
+          echo "${{ toJSON(github) }}"
+ 
