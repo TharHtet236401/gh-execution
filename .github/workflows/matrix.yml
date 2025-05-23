@@ -1,13 +1,11 @@
 name: Matrix
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
-   continue-on-error: true
+    continue-on-error: true
     strategy:
       matrix:
         node-version: [14, 16, 18]
